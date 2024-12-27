@@ -1,0 +1,132 @@
+:root{
+    --bg: rgb(251, 247, 238);
+}
+
+body{
+    background-color: var(--bg);
+    padding: 0;
+    margin: 0;
+}
+
+hr{
+    margin: 0;
+    padding: 0;
+}
+
+.first{
+    position: fixed;
+    height: 7.5vh;
+    padding: 3vh;
+    width: 100vw;
+    background-color: var(--bg);
+    margin: 0;
+}
+
+#top{
+    display: flex;
+}
+
+#top > h1{
+    float: left;
+    font-size: 5vh;
+    margin: 0;
+    margin-bottom: 2vh;
+    margin-left: 3vw
+}
+
+#top-right{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-left: 50vw;
+    margin-top: 2vh;
+}
+
+nav > a {
+    color: black;
+    text-decoration: none;
+    margin: 2vh;
+    font-size: 2.5vh;
+}
+
+#get-started-btn{
+    border: 2px solid black;
+    padding:1.5vh;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.second{
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    margin-left: 5vw;
+    margin-top: 0;
+    background-image: url(https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#second-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vh;
+    margin-right: auto;
+}
+
+h2{
+    font-size:20vh;
+    margin: 0%;
+    font-weight: lighter;
+    line-height: 0.75;
+    color: #242424;
+}
+
+#second-text > p{
+    font-size: 3.5vh;
+    margin-top: 5vh;
+}
+
+#start-reading-btn{
+    border: 2px solid black;
+    padding:1vh;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 13vw;
+    text-align: center;
+}
+
+/*figure{
+    height: min-content;
+    width: min-content;
+    align-items: end;
+    float: right;
+}*/
+
+.third{
+    height: 7.5vh;
+}
+
+#foot-content{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+#foot-content > nav  {
+    padding: 2vh;
+    margin-left: 22vw;
+}
+
+#foot-content > nav > a{
+    font-size: 2.2vh;
+    color: #5d5959;
+}
+
