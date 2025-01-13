@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.eyes-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+    align-items: center;
+}
+.eye {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.upper-eyelid,
+.lower-eyelid {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.upper-eyelid {
+  top: -10px;
+}
+.lower-eyelid {
+  bottom: -10px;
+}
+.iris {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
