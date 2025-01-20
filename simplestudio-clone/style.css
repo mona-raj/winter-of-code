@@ -1,7 +1,9 @@
 :root {
     --tan: #ccbaa9;
     --white: white;
-    --antique-white: #e8dacc
+    --antique-white: #e8dacc;
+    --border-black: #1f1f1f;
+    --dim-grey: #595959
 }
 body, html {
     position: relative;
@@ -14,7 +16,11 @@ nav {
     background: transparent;
     width: 100%;
     position: fixed;
+    /* filter: invert(); */
 }
+/* nav div a svg g path{
+    fill: #cd1111
+} */
 .nav-get-in-touch {
     color: var(--tan);
     text-decoration: underline;
@@ -23,18 +29,22 @@ nav {
     margin-right: 0;
 }
 
-.intro-section h1 {
+/* hero {
+    mix-blend-mode: difference;
+} */
+
+.section-intro h1 {
     color: var(--white);
     font-size: 7.5rem;
     font-weight: 400;
     line-height: 1;
 }
-.intro-section p {
+.section-intro p {
     color: var(--antique-white);
     font-size: 1rem;
     line-height: 1.5
 }
-.intro-section span {
+.section-intro span {
     display: block;
     width: 260px;
     height: 8px;
@@ -42,7 +52,7 @@ nav {
     border: 5px solid var(--white);
     margin-right: 2.5rem;
 }
-.intro-section iframe {
+.section-intro iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,4 +61,63 @@ nav {
     width: 1152px;
     height: 648px;
     border-radius: 20px;
+}
+
+.section-services h2 {
+    color: var(--white);
+    font-size: 7.5rem;
+    font-weight: 300;
+    line-height: .9;
+}
+.services-options {
+    color: var(--white);
+    /* display: flex; */
+}
+.service-item-name {
+    display: flex;
+    justify-content: space-between;
+   
+    padding-top: 20.8px;
+    padding-bottom: 20.8px;
+    cursor: pointer;
+}
+.service-item{
+    /* padding-bottom: 24px; */
+    border-bottom: 0.762px solid var(--border-black);
+}
+.services-options h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.service-item-body {
+    padding-right: 96px;
+    display: none;
+}
+.service-item-body p {
+    padding-bottom: 32px;
+    
+}
+.service-tags-line div {
+    padding: 8px 16px 8px 16px;
+    border: 0.762px solid white;
+    border-radius: 100rem;
+}
+
+.work-box {
+    color: var(--tan);
+    padding: 8px 16px 8px 16px;
+    border: 0.762px solid var(--tan);
+    border-radius: 100rem;
+}
+.work-view-more {
+    color: var(--tan);
+    text-decoration: underline;
+    font-size: 1.25rem;
+    margin-left: 150px;
+    margin-right: 0;
+}
+.section-work-images img {
+    border-radius: 20px;
+    position: sticky;
 }
