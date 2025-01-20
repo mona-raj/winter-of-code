@@ -3,21 +3,27 @@
     --white: white;
     --antique-white: #e8dacc;
     --border-black: #1f1f1f;
-    --dim-grey: #595959
+    --dim-grey: #595959;
+    --linen: #eee9e4;
 }
-body, html {
+
+body,
+html {
     position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    scrollbar-width: none;
 }
+
 nav {
     background: transparent;
     width: 100%;
     position: fixed;
     /* filter: invert(); */
 }
+
 /* nav div a svg g path{
     fill: #cd1111
 } */
@@ -39,11 +45,13 @@ nav {
     font-weight: 400;
     line-height: 1;
 }
+
 .section-intro p {
     color: var(--antique-white);
     font-size: 1rem;
     line-height: 1.5
 }
+
 .section-intro span {
     display: block;
     width: 260px;
@@ -52,6 +60,7 @@ nav {
     border: 5px solid var(--white);
     margin-right: 2.5rem;
 }
+
 .section-intro iframe {
     position: absolute;
     top: 0;
@@ -69,47 +78,56 @@ nav {
     font-weight: 300;
     line-height: .9;
 }
+
 .services-options {
     color: var(--white);
     /* display: flex; */
 }
+
 .service-item-name {
     display: flex;
     justify-content: space-between;
-   
+
     padding-top: 20.8px;
     padding-bottom: 20.8px;
     cursor: pointer;
 }
-.service-item{
+
+.service-item {
     /* padding-bottom: 24px; */
     border-bottom: 0.762px solid var(--border-black);
 }
+
 .services-options h4 {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.4;
 }
+
 .service-item-body {
     padding-right: 96px;
     display: none;
 }
+
 .service-item-body p {
     padding-bottom: 32px;
-    
+
 }
+
 .service-tags-line div {
     padding: 8px 16px 8px 16px;
     border: 0.762px solid white;
     border-radius: 100rem;
 }
 
-.work-box {
+.work-box,
+.manifesto-box {
     color: var(--tan);
     padding: 8px 16px 8px 16px;
     border: 0.762px solid var(--tan);
     border-radius: 100rem;
 }
+
 .work-view-more {
     color: var(--tan);
     text-decoration: underline;
@@ -117,7 +135,83 @@ nav {
     margin-left: 150px;
     margin-right: 0;
 }
+
 .section-work-images img {
     border-radius: 20px;
     position: sticky;
 }
+
+.section-people {
+    background-color: var(--linen);
+    border-radius: 20px;
+}
+
+.section-people h2 {
+    font-size: 6.5rem;
+    font-weight: 400;
+    line-height: .9;
+}
+
+.section-people p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.85rem;
+}
+
+.section-people h3 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 400;
+
+}
+
+.marquee-left img,
+.marquee-right img {
+    padding-left: -16px;
+    padding-right: 16px;
+    max-height: 353px;
+    max-width: 636px;
+
+}
+
+/* marquee animation */
+.marquee-left {
+    display: flex;
+    animation: marqueeLeft 20s infinite linear;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-right {
+    display: flex;
+    animation: marqueeRight 20s infinite linear;
+}
+
+@keyframes marqueeRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.section-manifesto p {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 400;
+}
+.text-change {
+    opacity: 0.65;
+    /* transition: opacity 5s; */
+}
+

@@ -7,6 +7,8 @@
     <title>Simple Studio - Digital Design Agency</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body class="bg-black">
@@ -180,22 +182,129 @@
                 <div class="work-view-more">View more</div>
             </div>
             <div class="section-work-images">
-                <img src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced72e3431183bd2b97f4b_01-MyTpen%402x-p-1600.jpg" alt=""><img src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced76719c2fe31deaa00b7_02-DrivenIQ%402x-p-1600.jpg" alt=""><img src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced79cbd18871ab5048989_03-TradeX%402x-p-1600.jpg" alt=""><img src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced7c4dc71cc8c7368b1ee_04-Flipando%402x-p-1600.jpg" alt=""><img src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced7eb8c987a0c524dd250_05-Hikko%402x-p-1600.jpg" alt="">
+                <img src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced72e3431183bd2b97f4b_01-MyTpen%402x-p-1600.jpg"
+                    alt=""><img
+                    src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced76719c2fe31deaa00b7_02-DrivenIQ%402x-p-1600.jpg"
+                    alt=""><img
+                    src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced79cbd18871ab5048989_03-TradeX%402x-p-1600.jpg"
+                    alt=""><img
+                    src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced7c4dc71cc8c7368b1ee_04-Flipando%402x-p-1600.jpg"
+                    alt=""><img
+                    src="https://cdn.prod.website-files.com/6479613e794b0caa072be654/64ced7eb8c987a0c524dd250_05-Hikko%402x-p-1600.jpg"
+                    alt="">
             </div>
         </section>
 
-        <section class="section-people pl-[40px] pr-[40px] pt-[64px] pb-[64px]">
+        <section class="section-people ml-[40px] mr-[40px] mt-[64px] mb-[64px] ">
+            <div class="flex justify-between pt-[144px] pr-[80px] pl-[80px]">
+                <div class="relative">
+                    <div class="round-logo absolute top-[-0.5rem] left-[19rem]">
+                        <svg width="121" height="120" viewBox="0 0 121 120" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M63.7517 10.8606L65.2743 -0.000610352L67.2946 0.28261L66.6047 5.20432L71.459 0.850896L73.6312 1.15541L68.4065 5.72023L72.3344 12.0637L69.9494 11.7294L66.4833 6.07018L65.7721 11.1438L63.7517 10.8606ZM53.1624 0.250435L53.8204 11.2178L55.8605 11.0954L55.5946 6.66245L56.8984 6.58422L60.0327 10.8451L62.2416 10.7126L58.874 6.15779C60.218 5.72309 61.2393 4.78434 61.1362 3.06637L61.1325 3.00501C60.9982 0.765519 59.252 -0.11494 56.8438 0.029553L53.1624 0.250435ZM57.1484 5.10677L55.5071 5.20524L55.2973 1.70795L56.9386 1.60947C58.2424 1.53124 59.0504 1.9138 59.1259 3.1716L59.1296 3.23295C59.1995 4.39872 58.5136 5.02485 57.1484 5.10677ZM46.2411 11.4496C48.229 10.849 49.0225 8.95422 48.333 6.67178L48.2975 6.55397C47.6436 4.38933 45.9512 3.14902 43.8896 3.77178C41.8281 4.39455 41.064 6.28048 41.7491 8.5482L41.7847 8.666C42.4786 10.9632 44.3268 12.0279 46.2411 11.4496ZM46.6876 13.0341C43.4628 14.0083 40.6586 12.3325 39.7423 9.29904L39.7067 9.18124C38.777 6.10362 40.2963 3.15393 43.4181 2.21089C46.5546 1.2634 49.391 2.83304 50.3251 5.92538L50.3607 6.04318C51.2904 9.1208 49.8831 12.0688 46.6876 13.0341ZM23.1185 12.667L31.2417 20.5253L32.8942 19.4938L30.5497 11.5367L36.6158 17.171L38.3465 16.0909L34.8687 5.33318L33.2552 6.34026L35.8778 14.2504L29.7418 8.53309L28.3104 9.42647L30.7656 17.3869L24.8882 11.5625L23.1185 12.667ZM20.7552 23.829C21.2479 24.2947 22.0102 24.2732 22.4759 23.7805C22.9522 23.2766 22.9307 22.5143 22.438 22.0486C21.9453 21.5829 21.1942 21.615 20.7179 22.1188C20.2522 22.6115 20.2625 23.3633 20.7552 23.829ZM81.1677 3.37069L76.658 13.368L78.5176 14.2069L80.435 9.95626L84.9233 11.9809L83.0059 16.2315L84.8795 17.0767L89.3893 7.07941L87.5156 6.23422L85.5982 10.4848L81.1099 8.46016L83.0273 4.20957L81.1677 3.37069ZM86.2447 17.8255L95.7579 11.2512L97.8931 12.8526L94.2087 23.7985L92.5153 22.5284L93.4448 19.8318L90.0948 17.3193L87.7786 18.9759L86.2447 17.8255ZM95.7242 13.3158L91.3679 16.4143L93.9572 18.3562L95.7242 13.3158ZM103.578 17.907L95.2427 25.0358L96.5687 26.5863L99.9378 23.7049L100.785 24.6958L99.2806 29.7572L100.716 31.4359L102.315 26.0118C103.47 26.8201 104.832 27.0678 106.138 25.9511L106.185 25.9112C107.887 24.4556 107.536 22.5351 105.971 20.7049L103.578 17.907ZM102.112 24.005L101.045 22.7577L103.703 20.4844L104.77 21.7318C105.618 22.7227 105.8 23.5964 104.844 24.414L104.797 24.4539C103.911 25.2116 102.999 25.0426 102.112 24.005ZM103.974 33.7024L104.548 34.752C105.726 36.9052 107.53 37.2641 109.657 36.101L109.764 36.0421C111.837 34.9085 112.573 33.2818 111.336 31.021L110.769 29.9848L103.974 33.7024ZM101.581 32.6855L111.203 27.4221L112.801 30.3423C114.634 33.6931 113.614 36.3668 110.814 37.8979L110.693 37.9642C107.894 39.4954 105.012 38.9566 103.164 35.5788L101.581 32.6855ZM112.172 43.7618C111.523 43.9479 111.155 44.6119 111.341 45.2607C111.531 45.9242 112.195 46.2923 112.844 46.1063C113.493 45.9202 113.846 45.2604 113.656 44.5969C113.47 43.9481 112.82 43.5758 112.172 43.7618ZM109.267 52.6857L120.219 52.1021L120.327 54.1393L115.671 54.3874L115.933 59.3043L120.589 59.0562L120.698 61.1087L109.747 61.6922L109.637 59.6397L114.294 59.3916L114.032 54.4747L109.375 54.7229L109.267 52.6857ZM119.899 68.7213L109.711 63.2509L109.386 65.1406L111.917 66.447L111.207 70.574L108.384 70.976L108.025 73.0622L119.447 71.3518L119.899 68.7213ZM113.302 67.1676L118.046 69.6325L112.754 70.3574L113.302 67.1676ZM106.801 76.1423L118.366 76.5973L117.606 78.5894L108.277 78.0842L115.567 83.9351L114.884 85.7265L105.96 78.3494L106.801 76.1423ZM113.163 88.9262L103.841 83.1135L100.068 89.1632L101.437 90.0168L104.128 85.7012L106.853 87.4003L104.805 90.6859L106.108 91.4989L108.157 88.2133L110.713 89.8067L108.16 93.9007L109.529 94.7543L113.163 88.9262ZM96.8395 92.8817L104.464 100.766L99.5789 105.489L98.4486 104.321L101.867 101.015L99.5956 98.6664L96.9051 101.268L95.8068 100.132L98.4973 97.5307L95.373 94.2999L96.8395 92.8817ZM92.9994 102.152C91.4743 99.7775 89.3455 99.3582 87.0352 100.842C84.5959 102.409 84.1461 104.575 85.6961 106.989L89.3019 112.603L91.0313 111.492L87.5168 106.02C86.29 104.11 86.5799 103.085 87.9092 102.231C89.2773 101.353 90.267 101.701 91.3529 103.392L94.942 108.981L96.6715 107.87L92.9994 102.152ZM81.2906 104.408L84.9732 114.739L82.6759 115.558L75.6641 109.638L78.3269 117.108L76.5787 117.731L72.896 107.401L74.8899 106.69L82.3648 112.949L79.5423 105.032L81.2906 104.408ZM68.2068 113.24C68.1283 112.569 67.5326 112.099 66.8623 112.177C66.1767 112.257 65.7059 112.853 65.7844 113.523C65.8629 114.194 66.4568 114.649 67.1424 114.569C67.8127 114.491 68.2853 113.91 68.2068 113.24ZM59.8738 109.017L58.448 119.875L55.745 119.52L53.8632 111.735L50.096 118.778L47.4233 118.427L48.849 107.57L50.8687 107.835L49.7919 116.035L54.1033 108.26L54.7563 108.345L56.9747 116.978L58.0515 108.778L59.8738 109.017ZM39.8851 116.012L47.3248 107.16L45.5416 106.455L43.745 108.664L39.8505 107.126L40.035 104.279L38.0663 103.501L37.4028 115.032L39.8851 116.012ZM42.756 109.873L39.3725 114.012L39.7459 108.684L42.756 109.873ZM36.7628 102.606L30.7307 111.709L29.0374 110.587L31.7708 106.462L25.5406 108.288L23.72 107.082L30.3738 105.225L29.5695 97.8394L31.5684 99.1639L32.2517 105.736L35.0695 101.484L36.7628 102.606ZM20.9233 104.63L28.6004 96.843L23.5472 91.8609L22.4197 93.0044L26.0246 96.5584L23.7805 98.8346L21.036 96.1288L19.9623 97.2179L22.7067 99.9237L20.6022 102.058L17.1825 98.6867L16.0551 99.8303L20.9233 104.63ZM20.4407 88.0211L10.9254 93.4749L9.91096 91.7049L13.9566 89.3861L11.5081 85.1142L7.46245 87.4331L6.44034 85.6498L15.9556 80.196L16.9777 81.9792L12.932 84.2981L15.3805 88.5699L19.4262 86.2511L20.4407 88.0211ZM4.88305 81.6507L15.1633 77.8296L14.4471 75.9029L4.16692 79.7241L4.88305 81.6507ZM12.9427 69.8691C13.5631 72.7952 12.3684 74.3342 10.3745 74.9137L9.96729 72.993C11.0191 72.6289 11.8271 72.0029 11.4422 70.1872C11.1909 69.0018 10.3525 68.3015 9.36211 68.5114C8.37175 68.7214 8.10159 69.2961 8.18552 71.0972C8.38439 73.7363 7.86179 75.1172 5.85106 75.5435C4.09542 75.9157 2.45681 74.6951 1.98279 72.4593C1.49287 70.1484 2.25058 68.5452 4.26179 67.8993L4.64991 69.73C3.56585 70.1637 3.22247 70.9107 3.48334 72.1411C3.74103 73.3566 4.45985 73.8627 5.28516 73.6878C6.15547 73.5033 6.51428 73.0509 6.3899 71.1329C6.20057 68.5388 6.64406 67.0807 8.78984 66.6257C10.6505 66.2313 12.4401 67.4982 12.9427 69.8691ZM2.44483 62.422L11.7983 62.1722L11.7434 60.1175L2.38995 60.3673L2.30845 57.3159L0.698425 57.3589L0.91631 65.5164L2.52633 65.4734L2.44483 62.422ZM11.0791 50.7548C11.4476 48.7171 10.1249 47.1529 7.78527 46.7299L7.66452 46.708C5.44567 46.3068 3.57659 47.247 3.19446 49.3602C2.81233 51.4734 4.14049 53.0074 6.465 53.4277L6.58575 53.4495C8.94045 53.8753 10.7243 52.7171 11.0791 50.7548ZM12.6887 51.077C12.091 54.3827 9.33085 56.1126 6.22145 55.5504L6.10069 55.5285C2.94601 54.9581 1.01583 52.2709 1.59447 49.0709C2.17585 45.8558 4.85631 44.0491 8.02609 44.6223L8.14685 44.6441C11.3015 45.2146 13.281 47.8016 12.6887 51.077ZM4.12475 39.4758L14.2148 43.8628L15.0308 41.9859L10.9525 40.2127L11.474 39.0132L16.6997 38.1474L17.5832 36.1153L11.9894 37.0559C12.2109 35.6588 11.836 34.3213 10.2554 33.6341L10.199 33.6095C8.13866 32.7137 6.56059 33.8734 5.5973 36.0889L4.12475 39.4758ZM10.2683 38.1198L9.61182 39.6298L6.39431 38.2309L7.05082 36.7209C7.57235 35.5214 8.2804 34.9735 9.43757 35.4766L9.49402 35.5012C10.5665 35.9675 10.8144 36.8639 10.2683 38.1198ZM19.7348 33.0193L15.8089 30.3363L8.62878 29.8324L9.90106 27.9708L15.043 28.4938L12.6533 23.9436L13.7785 22.2973L16.9813 28.648L20.8945 31.3224L19.7348 33.0193ZM59.243 47.1735H61.9718V56.6138L68.6471 49.9385L70.5766 51.868L63.9015 58.5432L73.3416 58.5432V61.272L63.9012 61.272L70.5767 67.9475L68.6472 69.877L61.9718 63.2016L61.9718 72.642H59.243L59.243 63.2016L52.5676 69.877L50.6381 67.9475L57.3136 61.2719H47.8731V58.5432H57.3134L50.6382 51.868L52.5678 49.9385L59.243 56.6138V47.1735Z"
+                                fill="#CCBAA9" />
+                        </svg>
 
+                    </div>
+                    <div>
+                        <h2 class="pb-[16px]">People</h2>
+                        <h2>& Culture</h2>
+                    </div>
+                    <div class="mt-[56px] pl=[96px] max-w-[472px]">
+                        <p>The studio was founded in 2022 by Guzmán Barquín. A multidisciplinary designer with 10 years
+                            of experience in digital products.</p>
+                    </div>
+                </div>
+                <div class="pt-[80px] max-w-[472px]">
+                    <p>Simple Studio® arises from the need to be part of a design space where transparency and
+                        collaboration are fundamental.</p>
+                    <br>
+                    <br>
+                    <p>We all bring our expertise, but even more importantly, our passion. If each person contributes a
+                        bit of what they're passionate about, only good things can come out of it.</p>
+                </div>
+            </div>
+            <div class="pt-[112px] pb-[144px] pr-[80px] pl-[80px]">
+                <h3>From Uruguay to Spain</h3>
+                <h3 class="pl-[72px]">we built Simple Studio® with</h3>
+                <h3 class="pl-[12px]">a group of people who love what they do.</h3>
+            </div>
+            <!-- marquee left -->
+            <div class=" mb-[30px] flex overflow-hidden">
+                <div class="flex marquee-left">
+                    <img src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3a8b6130f106ab69e_img-carrousel-1%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18f39ee89ff2192ed4745_img-carousel-1-p-500.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3d6587cc3844ac9ce_img-carrousel-3%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3ac88a8f5a210f98f_img-carrousel-4%402x-p-500.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3faa5e45333b4cfbf_img-carrousel-5%402x-p-800.webp"
+                        alt="">
+                </div>
+                <div class="flex marquee-left">
+                    <img src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3a8b6130f106ab69e_img-carrousel-1%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18f39ee89ff2192ed4745_img-carousel-1-p-500.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3d6587cc3844ac9ce_img-carrousel-3%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3ac88a8f5a210f98f_img-carrousel-4%402x-p-500.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3faa5e45333b4cfbf_img-carrousel-5%402x-p-800.webp"
+                        alt="">
+                </div>
+            </div>
+            <!-- marquee right -->
+            <div class="flex overflow-hidden rounded-2xl">
+                <div class="flex marquee-right">
+                    <img src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db31e54ed9858ab1c41_img-carrousel-8%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db371832c5c713fd22a_img-carrousel-7%402x-p-500.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18f39d2d50f2834ac9237_img-carousel-2-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db342c54436bca743ae_img-carrousel-10%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3ee89ff2192eba89e_img-carrousel-9%402x-p-500.webp"
+                        alt="">
+                </div>
+                <div class="flex marquee-right">
+                    <img src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db31e54ed9858ab1c41_img-carrousel-8%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db371832c5c713fd22a_img-carrousel-7%402x-p-500.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18f39d2d50f2834ac9237_img-carousel-2-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db342c54436bca743ae_img-carrousel-10%402x-p-800.webp"
+                        alt=""><img
+                        src="https://assets-global.website-files.com/646a4a280500c46bb83bf21f/64d18db3ee89ff2192eba89e_img-carrousel-9%402x-p-500.webp"
+                        alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-manifesto pl-[128px] pr-[128px] pt-[64px] pb-[64px]">
+            <div class="manifesto-box inline-block mb-[32px]">Simple Studio® Manifesto</div>
+            <div class="text-white ">
+                <p class="text-change">We created Simple Studio® believing that there is
+                    always a better way to do things. We are very
+                    passionate about what we do, and we are also the
+                    continuous evolution of the experiences we live.</p>
+                <br> <br>
+                <p class="text-change">We value honest design and the processes that drive
+                    it. We trust in the collaboration between people and
+                    how they complement each other.</p>
+                <br> <br>
+                <p class="text-change">Above all, we believe in the power of good design.</p>
+            </div>
         </section>
     </div>
 
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 </body>
 
 </html>
